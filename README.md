@@ -1,3 +1,13 @@
+<h1 align="center">Sub Domain Enumeration</h1>
+
+### Sub Domain finding using assetfinder+httpx
+    assetfinder -subs-only wordpress.org | httpx -follow-redirects -random-agent -mc 200,302 -silent -server -tech-detect -location | tee path/validsubDomains.txt
+
+<h1 align="center">CMS Detector</h1>
+
+### auto Detecting
+    cmseek -u https://wordpress.org --batch | tee 'path/cmsDetector.txt'
+
 <h1 align="center">wpscan</h1>
 
 ### Vulnerable plugin, themes, users
@@ -8,3 +18,8 @@
 
 ### Password brute force attack
     wpscan --url https://wordpress.org -e u --passwords /usr/share/wordlists/rockyou.txt -o scanned.txt
+
+<h1 align="center">sqlmap</h1>
+
+### auto crawling
+    sqlmap -u https://wordpress.org -crawl=3 --batch -o sqlmap.txt
