@@ -13,6 +13,21 @@
 ### Paramiter finding
     gospider -s "https://www.farmasilva.com.br" --no-redirect -o gospider.txt
 
+<h1 align="center">XSStrike, xss finder</h1>
+
+### xss finding
+    xsstrike -u "https://www.farmasilva.com.br/search?search_query=query" -f /usr/share/wordlists/SecLists/Fuzzing/XSS/XSS-Bypass-Strings-BruteLogic.txt
+
+<h1 align="center">XSpear, xss finder</h1>
+
+### xss finding
+    XSpear -u 'http://testphp.vulnweb.com/listproducts.php?cat=123' -v 2 -o XSpear.txt
+
+<h1 align="center">XSpear, xss finder</h1>
+
+### os command injection finding
+    commix -u 'http://192.168.31.177/vulnerabilities/exec/#' --cookie="security=low; PHPSESSID=hcjrgadiie5f40vup73ehe0fu7; security=low" --data="ip=INJECT_HERE&Submit=Submit"
+
 <h1 align="center">wpscan</h1>
 
 ### Vulnerable plugin, themes, users
