@@ -66,8 +66,3 @@
 
 ### Password brute force attack
     wpscan --url https://wordpress.org -e u --passwords /usr/share/wordlists/rockyou.txt -o scanned.txt
-
-<h1 align="center">sqlmap</h1>
-
-### auto crawling
-    sqlmap -u https://wordpress.org -crawl=3 --batch -o sqlmap.txt
