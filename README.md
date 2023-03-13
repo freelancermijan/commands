@@ -1,4 +1,4 @@
-# sqlmap
+<h1 align="center">sqlmap</h1>
 
 # parameter finding google dork
 
